@@ -65,7 +65,7 @@ def name():
     if age > 18:
         return "Welcome to the site. " + name + '!'
     else:
-         return "Sorry you are too young to use this site. " + name + '!'
+         return "Sorry you are not allowed to use this site. " + name + '!'
   
 
 if __name__=='__main__':
