@@ -57,12 +57,16 @@ def view():
 @app.route('/api')
 def name():
 
-    return jsonify({
-        "message": "Updated API content from Tutedude_new branch",
-        "author": "Tutedude",
-        "status": "active"
-    })
+    name = request.values.get('name')
+    age = request.values.get('age')
+    
+    age = int(age)
 
+    if age > 18:
+        return "Welcome to the site. " + name + '!'
+    else:
+         return "Sorry you are not allowed to use this site. " + name + '!'
+  
 
 if __name__=='__main__':
     app.run(host = '0.0.0.0', port=9000,debug=True)
